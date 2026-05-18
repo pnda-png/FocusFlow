@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #2B5BB2;
+  --color-primary-container: #79A3FF;
+  --color-secondary: #644FAD;
+  --color-secondary-container: #B09AFE;
+  
+  /* Shared Base Tokens - Light Default */
+  --color-surface: #F8F9FF;
+  --color-on-surface: #0B1C30;
+  --color-on-surface-variant: #434752;
+  --color-surface-container: #EEF2FF;
+  --color-surface-container-low: #F1F4FF;
+  --color-surface-container-high: #E0E7FF;
+
+  --radius-xl: 1.5rem;
+  --radius-lg: 1rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    @apply font-display tracking-tight text-on-surface;
+  }
+
+  .dark {
+    --color-surface: #070B14;
+    --color-on-surface: #F1F4FF;
+    --color-on-surface-variant: #8E96A5;
+    --color-surface-container: #101625;
+    --color-surface-container-low: #0C111C;
+    --color-surface-container-high: #192135;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/70 dark:bg-surface-container/40 backdrop-blur-xl border border-white/20 dark:border-white/5 shadow-sm transition-all duration-300;
+}

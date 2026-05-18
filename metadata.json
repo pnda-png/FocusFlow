@@ -1,0 +1,6 @@
+{
+  "name": "FocusFlow",
+  "description": "A modern, minimalist homework tracker for students to stay focused and organized.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
